@@ -1,0 +1,168 @@
+$prime: #e40046
+
+body
+    min-height: 100vh
+    color: #fff
+    display: flex
+    flex-direction: column
+    background-color: #fff
+    font-family: 'Stolzl Book', sans-serif
+
+img
+    max-width: 100%
+
+.container
+    max-width: 1400px
+    width: 100%
+    padding: 0 20px
+    margin: 0 auto
+
+section
+    overflow: hidden
+    position: relative
+
+a
+    text-decoration: none
+    color: #fff
+    transition: all ease .3s
+
+select
+    color: #313131
+    background-color: transparent
+    appearance: none
+
+.btn
+    display: inline-block
+    padding: 18px 40px
+    background-color: #fff
+    color: #000
+    &-menu
+        display: inline-block
+        vertical-align: middle
+        width: 50px
+        height: 25px
+        margin: 0
+        background-color: transparent
+        background-image: url('../img/meny.png')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+ul
+    list-style-type: none
+
+h1, h2, h3, h4
+    font-family: 'Stolzl', sans-serif
+    font-weight: bold
+
+.d-wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.menuson
+    position: fixed
+    left: -101%
+    top: 0
+    max-width: 100%
+    width: 100%
+    background: #1251a0
+    padding: 20px
+    height: 100%
+    z-index: 9999
+    transition: all 0.3s ease
+    ul
+        margin-bottom: 20px
+    li
+        color: #fcfbf7
+        font-size: 38px
+        letter-spacing: 2px
+        margin-bottom: 20px
+        font-family: 'Stolzl', sans-serif
+
+    a
+        font-family: 'Stolzl Book', sans-serif
+        color: #cdd9e6
+        font-size: 20px
+        line-height: 1
+        letter-spacing: 1px
+
+    .close
+        position: absolute
+        top: 30px
+        cursor: pointer
+        right: 30px
+        font-size: 25px
+
+    &.shows
+        left: 0
+
+.body-m
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    padding-top: 11%
+    max-width: 1110px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    ul
+        li
+            margin-bottom: 0
+            &::before
+                display: none
+
+.headline
+    font-size: 80px
+    margin: 0 0 30px
+
+.textline
+    font-size: 24px
+    line-height: 36px
+    margin: 0 0 50px
+
+.text
+    font-size: 18px
+    line-height: 27px
+    margin-bottom: 50px
+
+ul
+    li
+        font-size: 18px
+        z-index: 1
+        padding-left: 20px
+        position: relative
+        margin-bottom: 10px
+        &::before
+            content: ''
+            display: inline-block
+            width: 10px
+            height: 10px
+            background-color: #fff
+            position: absolute
+            top: 14px
+            left: 0
+            border-radius: 50%
+
+@media screen and ( max-width: 1500px )
+    .headline
+        font-size: 60px
+        margin: 0 0 20px
+
+    .textline
+        font-size: 20px
+        line-height: 30px
+        margin: 0 0 30px
+
+@media screen and ( max-width: 700px )
+    .headline
+        font-size: 37px
+        margin: 0 0 25px
+
+    .textline
+        font-size: 16px
+        line-height: 24px
+        margin: 0 0 30px
+
+    .text
+        font-size: 16px
+        line-height: 24px

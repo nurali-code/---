@@ -1,0 +1,393 @@
+@import 'normolize'
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    border: none
+    outline: none
+
+@import 'elements'
+@import 'header'
+@import 'footer'
+
+.half
+    min-width: 50%
+    width: 50%
+    height: 100%
+    min-height: 100vh
+    padding: 125px 0px 160px
+    background-repeat: no-repeat
+    background-size: 200% auto
+    background-position: bottom center
+    &-img
+        display: block
+        min-width: 50%
+        width: 50%
+        height: 101%
+        position: absolute
+        top: 0
+        right: 0
+        object-fit: cover
+        object-position: center center
+
+.hero
+    position: relative
+    .container
+        position: static
+        width: 100%
+
+    &-title
+        min-height: 900px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        width: 100%
+        background-color: $prime
+        padding: 125px 0 160px
+        background-image: url('../img/shape.png'), url('../img/shape-2.png')
+        background-repeat: no-repeat
+        background-position: top -250px left -200px, bottom left
+        background-size: auto auto, 140vh auto
+
+    &-img
+
+    h1
+        max-width: 45%
+        font-size: 126px
+        line-height: 100%
+        margin: 0 0 45px
+
+    p
+        max-width: 45%
+        font-size: 34px
+        line-height: 130%
+        letter-spacing: 1px
+        margin: 0 0 45px
+
+    &-links
+        max-width: 50%
+        a
+            font-size: 24px
+            margin: 0 40px 0 0
+            display: inline-block
+            padding: 10px 0
+            border-bottom: 1px solid rgba(#fff, .2)
+            &:hover
+                opacity: .5
+
+.project
+    background-color: #154f9f
+    .container
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+
+    &-title
+        background-image: url('../img/shape-3.png')
+        background-repeat: no-repeat
+        background-size: 1920px auto
+        padding-right: 80px
+        background-position: bottom center
+        padding:
+            left: 80px
+
+    .text
+        margin-bottom: 100px
+
+    .half
+        margin: 0 0 0 auto
+        &-img
+            left: 0
+            right: auto
+
+.numbers
+    background: #131226
+    .headline
+        margin-bottom: 80px
+    .d-wrap
+        flex-wrap: wrap
+        align-items: flex-start
+
+    &-content
+        position: absolute
+        top: 0
+        right: 0
+        background-color: #eef3fb
+        background-image: url('../img/shape-4.png')
+        padding:
+            left: 80px
+            right: 80px
+        z-index: 100
+        color: #000
+
+    &-title
+        background-image: url(../img/shape.png)
+        background-repeat: no-repeat
+        background-position: bottom left -30%
+        padding-right: 40px
+        padding-bottom: 60px
+
+    &-item
+        margin-bottom: 90px
+        width: 48%
+        max-width: 320px
+        display: inline-block
+
+    &__heading
+        font-size: 74px
+        line-height: 60px
+        font-weight: 300
+        margin: 0 0 14px
+        span
+            display: inline-block
+            vertical-align: bottom
+            font-size: 30px
+            line-height: 30px
+        img
+            max-height: 40px
+
+    &__text
+        font-size: 16px
+        line-height: 24px
+        opacity: .6
+        letter-spacing: 1px
+
+    .author
+        text-align: center
+        img
+            width: 100px
+            height: 100px
+            border-radius: 50%
+            object-fit: cover
+            margin-bottom: 25px
+
+        &__heading,
+        &__text
+            font-size: 16px
+            line-height: 27px
+
+    blockquote
+        text-align: justify
+        text-align-last: center
+        font-size: 18px
+        line-height: 27px
+        padding: 70px 0 0
+        background-image: url('../img/quote.png')
+        background-repeat: no-repeat
+        background-position: center top
+        margin-bottom: 40px
+
+.suppliers
+    padding: 120px 0
+    background-color: #e30046
+    background-image: url('../img/bg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    &-title
+        max-width: 410px
+
+    .headline
+        font-size: 56px
+
+    .btn
+        display: block
+        max-width: 300px
+        margin-bottom: 20px
+
+    &-img
+        max-width: 60%
+
+@media screen and ( max-width: 1500px )
+    .half
+        &-img
+            display: block
+
+    .hero
+        &-title
+            min-height: 600px
+            background-size: auto auto, 1540px auto
+            background-position: top -280px left -200px, bottom left -100px
+
+        h1
+            font-size: 90px
+
+        p
+            font-size: 25px
+
+        &-links
+            a
+                font-size: 18px
+                margin: 0 20px 10px 0
+                display: inline-block
+                padding: 10px 0
+                border-bottom: 1px solid rgba(#fff, .2)
+                &:hover
+                    opacity: .5
+
+    .project
+        &-title
+            padding: 100px 40px 120px
+
+    .numbers
+        &-title
+            padding: 120px 40px 120px 0
+            background-position: bottom -50% right -850px
+
+        .headline
+            margin-bottom: 60px
+
+        &-content
+            padding:
+                top: 100px
+                right: 20px
+                left: 40px
+
+        &-item
+            margin-bottom: 60px
+
+        &__heading
+            font-size: 50px
+            span
+                font-size: 21px
+                line-height: 28px
+
+@media screen and ( max-width: 900px )
+    .half
+        position: static
+        width: 100%
+        min-width: 100%
+        max-width: 100%
+        min-height: unset
+        height: unset
+        position: static
+        &-img
+            position: static
+            width: 100%
+
+    .hero
+        &-title
+            display: block
+
+        h1
+            max-width: 100%
+
+        p
+            max-width: 100%
+
+        &-links
+            max-width: 100%
+
+        &-img
+            position: static
+            width: 100%
+            max-width: 100%
+            height: unset
+
+    .project
+        .text
+            margin-bottom: 40px
+        &-title
+            padding: 70px 20px 130px
+
+    .numbers
+        .container
+            padding: 0
+        &-title
+            padding: 100px 20px 120px
+            background-size: 600px auto
+            background-position: bottom right -250px
+            .d-wrap
+                max-width: 600px
+        &-content
+            padding: 80px 20px 130px
+
+    .suppliers
+        padding: 80px 0
+        .container
+            display: block
+
+        &-title
+            max-width: 100%
+
+        &-img
+            width: 100%
+            max-width: 100%
+
+@media screen and ( max-width: 700px )
+    .half
+        padding: 64px 0
+
+    .hero
+        &-title
+            min-height: unset
+            padding: 70px 0 90px
+            background-size: 600px auto, 800px auto
+            background-position: top -180px left -80px, bottom left
+        h1
+            font-size: 75px
+            margin-bottom: 30px
+        p
+            margin-bottom: 30px
+
+        &-links
+            a
+                font-size: 14px
+                margin-right: 18px
+
+    .numbers
+        &-title
+            padding: 64px 20px
+            background-position: bottom right -350px
+        .d-wrap
+
+        &-item
+
+        .headline
+            margin-bottom: 25px
+
+        &__heading
+            font-size: 40px
+
+            span
+                font-size: 18px
+                line-height: 24px
+
+        &__text
+            font-size: 12px
+            line-height: 16px
+
+        &-content
+            padding: 64px 20px 120px
+
+        blockquote
+            font-size: 12px
+            line-height: 16px
+            background-size: 28px 18px
+            padding-top: 36px
+
+        .author
+            img
+                margin-bottom: 10px
+            &__heading,
+            &__text
+                font-size: 12px
+                line-height: 16px
+
+    .project
+        &-title
+            padding-right: 20px
+            padding-left: 20px
+
+    .suppliers
+        padding: 64px 0
+        .headline
+            font-size: 37px
+
+        ul
+            display: none
+
+        .btn
+            margin-bottom: 30px
