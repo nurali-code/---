@@ -1,0 +1,51 @@
+@import 'header'
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap')
+body
+    font-size: .8rem
+    font-family: 'Montserrat', sans-serif
+    min-height: 100vh
+
+.bi
+    fill: #fff
+
+.btn
+    img
+        max-width: 16px
+        vertical-align: middle
+        display: inline
+        margin-right: 4px
+
+    &-add
+        min-width: 150px
+
+.sidebar
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    z-index: 100
+    padding: 65px 0 0
+    box-shadow: inset -1px 0 0 rgb(0 0 0 / 10%)
+    .nav
+        &-link
+            display: block
+            font-weight: 500
+            line-height: 10px
+            color: #333
+            &.active
+                background-color: rgba(#2470dc, .2)
+
+.table
+    .btn
+        img
+            min-width: 13px
+            margin: 0
+            object-position: center center
+            vertical-align: middle
+            object-fit: contain
+
+.form-signin
+    width: 100%
+    max-width: 330px
+    padding: 40px 15px 0
+    margin: auto
