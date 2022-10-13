@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">
+            <img src="./assets/img/settings.svg" alt="settings">
+            <span class="d-none d-md-inline">Панель управления</span>
+        </a>
+        <div class="btn-group user">
+            <button type="button" class="dropdown-toggle btn user-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="./assets/img/user.jpg" class="me-0 me-md-2" alt="img">
+                <span class="d-none d-md-inline-block">
+                    Иван Сергеевич <br>
+                    <i>Super Admin</i>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Настройки</a></li>
+                <li><a class="dropdown-item" href="#">Профиль</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="./log-in.html">Выход</a></li>
+            </ul>
+        </div>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-4">
+                    <ul class="nav d-block">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./index.html">
+                                <img src="./assets/img/list.svg" alt="Список клиентов"> Список клиентов
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./chanels.html">
+                                <img src="./assets/img/list-2.svg" alt="Список каналов">
+                                Список каналов
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./assets/img/doc.svg" alt="Документы">
+                                Документы
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./appeals.html">
+                                <img src="./assets/img/chat.svg" alt="Обращения">
+                                Обращения
+                                <span class="badge rounded-pill bg-danger">99+</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="./assets/img/list.svg" alt="Ведомства">
+                                Ведомства
+                            </a>
+                        </li>
+                    </ul>
+                    <hr class="d-md-none">
+                    <ul class="nav d-md-none">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./log-in.html">Выход</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 pb-2">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Заявка</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <button type="button" class="btn btn-sm btn-outline-secondary me-2">Отмена</button>
+                        <button type="button" class="btn btn-add btn-sm btn-primary me-2">Принять</button>
+                    </div>
+                </div>
+                <h5 class="col-12 mb-2">Информация об организации</h5>
+                <!-- <hr class="col-12"> -->
+                <table class="table table-bordered mb-5">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Наименование организации
+                            </th>
+                            <td>
+                                Администрация муниципального образования "Lorem RUSO"
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                БИК
+                            </th>
+                            <td>
+                                02158494
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Юридический адрес
+                            </th>
+                            <td>
+                                127287,г. Москва, вн.тер.г. муниципальный округ Савеловский, ул Хуторская 2-я, д. 38А, стр. 26
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                Наименование Банка
+                            </th>
+                            <td colspan="2">Larry the Bird</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="col-12 mb-2">Руководитель</h5>
+                <!-- <hr class="col-12"> -->
+                <table class="table table-bordered mb-5">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Наименование организации
+                            </th>
+                            <td>
+                                Администрация муниципального образования "Lorem RUSO"
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                БИК
+                            </th>
+                            <td>
+                                02158494
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h5 class="col-12 mb-2">Отвтественное лицо</h5>
+                <!-- <hr class="col-12"> -->
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th scope="row">
+                                Наименование организации
+                            </th>
+                            <td>
+                                Администрация муниципального образования "Lorem RUSO"
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                БИК
+                            </th>
+                            <td>
+                                02158494
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+
+</html>
