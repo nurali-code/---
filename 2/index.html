@@ -51,12 +51,12 @@
                 <div class="position-sticky pt-4">
                     <ul class="nav d-block">
                         <li class="nav-item active">
-                            <a class="nav-link active" aria-current="page" href="#">
+                            <a class="nav-link active" aria-current="page" href="./index.html">
                                 <img src="./assets/img/list.svg" alt="Список клиентов"> Список клиентов
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./chanels.html">
                                 <img src="./assets/img/list-2.svg" alt="Список каналов">
                                 Список каналов
                             </a>
@@ -68,9 +68,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="./appeals.html">
                                 <img src="./assets/img/chat.svg" alt="Обращения">
                                 Обращения
+                                <span class="badge rounded-pill bg-danger">99+</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -94,6 +95,11 @@
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Список клиентов</h1>
                     <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2" role="group" aria-label="Basic example">
+                            <a href="./index.html" type="button" disabled class="btn btn-primary">Клиенты</a>
+                            <a href="./organizations.html" type="button"
+                                class="btn btn-outline-secondary">Организации</a>
+                        </div>
                         <button type="button" class="btn btn-sm btn-outline-secondary me-2">Экспорт</button>
                         <button type="button" class="btn btn-add btn-sm btn-primary me-2" data-bs-toggle="modal"
                             data-bs-target="#addModal">
@@ -111,6 +117,7 @@
                                 <th scope="col">Имя</th>
                                 <th scope="col">Телефон</th>
                                 <th scope="col">Регистрация</th>
+                                <th scope="col">Тип</th>
                                 <th scope="col">Каналы</th>
                                 <th scope="col">Действия</th>
                             </tr>
@@ -121,6 +128,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Административный Сектор</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -135,6 +143,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>2.12.21</td>
+                                <td>Блогер</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -149,6 +158,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>03.12.21</td>
+                                <td>Блогер</td>
                                 <td>STS</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -163,6 +173,7 @@
                                 <td>Tomas Иванов</td>
                                 <td>8 555-915-22-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -177,6 +188,7 @@
                                 <td>Tony Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -191,6 +203,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>06.12.21</td>
+                                <td>Блогер</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -205,6 +218,7 @@
                                 <td>Rose Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>07.12.21</td>
+                                <td>Административный Сектор</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -219,6 +233,7 @@
                                 <td>Tru Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>08.12.21</td>
+                                <td>Административный Сектор</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -233,6 +248,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>09.12.21</td>
+                                <td>Блогер</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -247,6 +263,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>09.12.21</td>
+                                <td>Блогер</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -261,6 +278,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -275,6 +293,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -289,6 +308,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -303,6 +323,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -317,6 +338,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -331,6 +353,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -345,6 +368,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -359,6 +383,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -373,6 +398,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -387,6 +413,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
@@ -401,6 +428,7 @@
                                 <td>Иван Иванов</td>
                                 <td>8 992-915-25-18-33</td>
                                 <td>01.12.21</td>
+                                <td>Организация</td>
                                 <td>STS, SBS, MIR</td>
                                 <td>
                                     <button class="btn btn-sm btn-secondary" data-bs-toggle="modal"
