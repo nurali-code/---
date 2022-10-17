@@ -1,3 +1,9 @@
+header,
+header .nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    
 header
     padding: 25px 0
     position: relative
@@ -5,10 +11,7 @@ header
     .container
         position: relative
         z-index: 11111
-    .container,.nav
-        display: flex
-        justify-content: space-between
-        align-items: center
+        
 
     .logo
         display: inline-block
@@ -30,7 +33,7 @@ header
     @media screen and ( max-width: 1170px )
         .logo
             margin-left: 100px
-        
+
         .nav
             position: fixed
             top: 0
@@ -104,6 +107,6 @@ header
                 max-width: 310px
             &-link
                 padding: 4px 15px
-         
+
             .btn
                 margin-left: 15px

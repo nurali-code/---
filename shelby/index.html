@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelby</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver-123">
 </head>
 
 <body>
 
     <main class="main">
-        <header>
-            <div class="container">
+        <div class="container">
+            <header>
                 <button class="btn-menu"><span></span></button>
                 <a href="./index.html" class="logo"><img src="./img/logo.png" alt="logo"></a>
                 <nav class="nav">
@@ -26,10 +26,7 @@
                     <button class="btn open-modal" data-modal="modal-form">Начать проект</button>
                 </nav>
                 <button class="btn open-modal" data-modal="modal-form">Начать проект</button>
-            </div>
-        </header>
-
-        <div class="container">
+            </header>
             <div class="main-title">
                 <h1 class="headline">
                     Подбор и доставка автомобилей из Южной Кореи по всей России
@@ -45,14 +42,14 @@
         <img src="img/car-2.jpg" class="main__img" alt="car">
     </main>
 
-    <section class="info">
-        <div class="container">
+    <section class="calculation">
+        <div class="container wrap">
             <h2 class="headline">Рассчитать стоимость авто из Кореи </h2>
-            <button class="btn">Рассчитать</button>
+            <button class="btn btn-second">Рассчитать</button>
         </div>
     </section>
 
-    <section class="info bg">
+    <section class="info">
         <div class="container">
             <h2 class="headline">Какие авто можно заказать и по какой цене?</h2>
             <p class="textline">
@@ -64,7 +61,7 @@
         </div>
     </section>
 
-    <section class="info">
+    <section class="info bg">
         <div class="container">
             <div class="wrap">
                 <div class="info-title">
@@ -100,7 +97,7 @@
         </div>
     </section>
 
-    <section class="info bg">
+    <section class="info">
         <div class="container">
             <div class="wrap">
                 <div class="info-title">
@@ -258,20 +255,23 @@
         </div>
     </section>
 
-    <section class="credit">
+    <section class="info">
         <div class="container">
             <div class="wrap">
                 <div class="credit">
-                    <img src="img/credit.avif" alt="credit">
-                    <button class="btn btn-second">Узнать условия кредитования</button>
+                    <img src="img/bank.png" alt="credit">
+                    <button class="btn">Узнать условия кредитования</button>
+                </div>
+                <div class="info-title">
+                    <h2 class="headline">Авто из Кореи в кредит</h2>
+                    <p class="textline">
+                        Поможем с оформлением кредита на авто под низкий процент <strong>без первоначального
+                            взноса</strong>.
+                        <br>
+                        Для подробностей получения кредита жмите на кнопку и заполняйте форму.
+                    </p>
                 </div>
             </div>
-            <h2 class="headline">Авто из Кореи в кредит</h2>
-            <p class="textline">
-                Поможем с оформлением кредита на авто под низкий процент <strong>без первоначального взноса</strong>.
-                <br>
-                Для подробностей получения кредита жмите на кнопку и заполняйте форму.
-            </p>
         </div>
     </section>
 
@@ -333,6 +333,29 @@
                     <p class="num">3</p>
                     <p class="text">По приходу во Владивосток - оплата пошлины и услуг таможенного оформления.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download model">
+        <div class="container wrap">
+            <form action="#">
+                <label for="u-phone3">Телефон *</label>
+                <input type="tel" required id="u-phone3" name="u-phone" placeholder="+7 (___)-___-__-__">
+                <label for="u-model">Марка, модель и год авто</label>
+                <input type="text" required id="u-model" name="u-model" placeholder="Марка, модель и год авто">
+                <label for="mess2">В какой мессенджер отправить?</label>
+                <select name="mess2" id="mess">
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Telegram">Telegram</option>
+                </select>
+                <button type="submit" class="btn">Заказать поиск</button>
+            </form>
+            <div class="download-title">
+                <h2 class="headline">Не нашли подходящий автомобиль в каталоге?</h2>
+                <p class="textline">
+                    Не вопрос! Укажите в форме марку, модель и год желаемого автомобиля и мы с Вами свяжемся
+                </p>
             </div>
         </div>
     </section>

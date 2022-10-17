@@ -8,8 +8,9 @@
     overflow: hidden
     position: relative
     z-index: 1
-    min-height: 100vh
-    // &::after,
+    height: 100vh
+    min-height: 600px
+    max-height: 1080px
     &::before
         content: ''
         display: block
@@ -21,9 +22,7 @@
         left: 0
         background-color: $black
         box-shadow: 0px 0px 80px 60px $black
-    &::after
-        top: auto
-        bottom: 0
+
     .container
         max-width: 1600px
 
@@ -54,7 +53,7 @@
             background-color: $yelow
 
     &-title
-        padding-top: 15vh
+        padding-top: 100px
         max-width: 45%
         position: relative
         z-index: 1000
@@ -64,15 +63,49 @@
         &-second
             margin: 0 10px 10px 0
 
+.calculation
+    position: relative
+    z-index: 99999999999
+    padding: 0 0 60px
+
+    &::before
+        // content: ''
+        display: block
+        width: 200px
+        height: 200px
+        position: absolute
+        top: 0
+        left: 5%
+        background-image: url('../img/calculator.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        opacity: .3
+        transform: rotate(-25deg)
+
+    .container
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 999999
+        padding: 50px 80px
+        border-radius: 8px
+        top: -80px
+
+        background: rgb(39,25,255)
+        background: linear-gradient(153deg, rgba(39,25,255,1) 0%, rgba(9,9,121,1) 45%, rgba(0,212,255,1) 100%)
+
+    .headline
+        margin: 0
+
 .info
     text-align: center
 
     &.bg
-        background-color: rgba(255, 255, 255, .05)
+        background-color: rgba(255, 255, 255, .08)
 
     .headline
         text-align: center
-        margin-bottom: 30px
+        margin-bottom: 20px
 
     .textline
         max-width: 800px
@@ -157,6 +190,7 @@
 
     &-box
         width: 24%
+        min-height: 190px
         border: 1px solid rgba(255, 255, 255, .5)
         padding: 20px
         margin-bottom: 20px
@@ -166,11 +200,12 @@
         &:nth-of-type(7)
             width: 32.5%
         &:hover
-            background-color: $black
+            transform: translateY(-5px)
+            background-color: rgba(0, 0, 0, .2)
 
         img
             width: 60px
-            height: 60px 
+            height: 60px
             object-fit: contain
             object-position: center center
             margin-bottom: 5px
@@ -179,17 +214,34 @@
             font-weight: 300
             font-size: 18px
 
-.credit 
-    display: none
+.credit
+    width: 45%
+    display: block
+    border-radius: 20px
+    padding: 50px
+    background-color: #fff
+    img
+        width: 100%
+        display: block
+        margin-bottom: 30px
+        text-align: left
+    .btn
+        display: block
+        width: 100%
 
 .download
+    padding: 80px 0
     position: relative
     z-index: 1
     &-title
         max-width: 55%
+
     .headline
-        font-size: 65px
+        // font-size: 65px
         margin-bottom: 30px
+
+    .textline
+        font-weight: 400
 
     &::before
         content: ''
@@ -217,11 +269,17 @@
             width: 100%
             margin-top: 30px
 
+    &.model
+        &::before
+            opacity: .3
+            background-image: url('../img/car-4.jpg')
+
 .payment
-    .headline
+    // padding: 80px 0 120px
     &-item
         width: 32%
         padding: 20px
+        margin-bottom: 30px
         border-left: 1px solid #fff
         transition: all ease .3s
         &:hover
@@ -249,6 +307,7 @@
             width: 150px
             height: 150px
             border: 1px solid rgba(255, 255, 255, .3)
+            margin-bottom: 10px
             border-radius: 50%
             object-fit: cover
             object-position: center center
@@ -259,6 +318,7 @@
         margin-bottom: 5px
 
     &__phone
+        font-size: 18px
         opacity: 1
         font-weight: 300
         background-image: url('../img/phone.svg')
