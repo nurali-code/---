@@ -1,160 +1,95 @@
-.start
-    background-color: #fff
-    color: $black
-    padding: 0px 0 120px
+.contacts
     position: relative
-    z-index: 100
-    &::before
-        position: relative
-        content: ''
-        display: block
-        background-color: $black
-        height: 128px
-        border-radius: 0px 0px 140px 0px
-        margin-bottom: 120px
+    z-index: 1
+    min-height: 90vh
+    iframe
+        width: 100% !important
+        height: 100% !important
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
 
     .container
-        background-image: url('../img/watermark_dark.svg')
-        background-repeat: no-repeat
-        background-position: right center
-        background-size: 415px auto
+        padding: 100px 0 0
+        position: static
+        z-index: unset
 
-    .headline
-        max-width: 560px
-        text-align: left
-        margin-bottom: 16px
+    &-item
+        max-width: 350px
+        padding: 20px
+        color: $black
+        border-radius: 10px
+        background-color: #fff
+        position: absolute
+        top: 10%
+        left: 20%
+        box-shadow: 0 0 20px -2px rgba(0, 0, 0, .5)
 
-    .textline
-        max-width: 570px
-        text-align: left
-        margin-bottom: 60px
+    &__img
+        width: 100% 
+        border-radius: 6px
+        height: 200px 
+        margin-bottom: 10px
+        object-fit: cover
 
-    .wrapper
-        max-width: 560px
+    &__heading 
+        font-size: 20px
+        margin-bottom: 15px
 
-    .rules
-        font-style: normal
+    &__link 
+        display: flex
+        align-items: center
+        color: #000
+        font-size: 18px
+        line-height: 120%
         font-weight: 400
-        font-size: 12px
-        line-height: 16px
-        opacity: .7
+        padding: 5px 0
+        img 
+            width: 25px
+            height: 100% !important
+            object-fit: contain
+            margin-right: 10px
+            vertical-align: middle
 
-    .col
-        max-width: 450px
-
-    form
-        max-width: 830px
-        .inp-wrap
-            width: 100%
-
-    .cost
-        margin: 0 auto 15px 0
-        &__descr
-            font-weight: 400
-            font-size: 20px
-            opacity: .7
-            line-height: 26px
-        &__price
-            font-weight: 600
-            font-size: 24px
-            line-height: 32px
-
-    .btn
-        margin: 15px 30px 15px 0
-
-    &.type_3
-        padding: 0
-        &::before
-            margin: 0
-        
-        .container
-            padding: 0 15px
-            background-image: none
-
-        .start-img
-            max-width: 40%
-
-    &.type_2
-        .container
-            background-image: none
-        .col
-            margin: 0 auto 0 0
-            .wrapper
-                display: flex
-
-footer
-    background-color: $black
-    text-align: center
-    padding: 40px 0
-    margin: auto 0 0
+.footer
+    padding: 50px 0 50px
+    // border-top: 1px solid rgba(255, 255, 255, .5)
     .logo
-        display: block
         max-width: 200px
-        margin: 0 auto 60px
 
-    .social
-        margin: 0 0 60px
+    &__contacts
+        text-align: right
+        a
+            font-size: 16px
+            display: inline-block
+            text-transform: capitalize
+            margin: 0 4px 0
+            opacity: .8
+            img
+                width: 20px
+                margin-right: 3px
+                display: inline-block
+                vertical-align: middle
+    
+    &__phone
+        opacity: 1 !important
+        display: block
+        font-size: 22px !important
+        margin-bottom: 2px !important
+        img
+            width: 35px !important
 
-    .copyright
-        font-weight: 400
-        font-size: 12px
-        line-height: 16px
-        opacity: .7
+    &__bottom
+        border-top: 1px solid rgba(255, 255, 255, .2)
+        margin-top: 30px
+        padding: 30px 0 0
+        text-align: center
+        width: 100%
 
-@media screen and ( max-width: 1170px )
-    .start
-        &::before
-            height: 124px
-            z-index: 1
-        .container
-            background-size: 40% auto
-            background-position: center right 40px
-        .headline
-            margin-bottom: 8px !important
-        .headline,
-        .textline
-            max-width: 330px
-        .textline
-            margin-bottom: 30px
-
-        form
-            max-width: 330px
-            .wrapper
-                display: block
-            .rules
-                margin: 0
-                padding-top: 15px
-
-        &.type_2
-            .textline
-                max-width: 570px
-            form
-                max-width: 100%
-
-@media screen and ( max-width: 700px )
-    .start
-        &::before
-            margin-bottom: 60px
-            height: 100px
-        .container
-            background-image: none
-
-        .headline,
-        .textline,
-        form
-            max-width: 100%
-            .col
-                order: 7
-                .wrapper
-                    flex-direction: column-reverse
-
-            .inp-count
-                order: 6
-            .btn
-                width: 100%
-                margin: 0
-
-    footer
-        .social,
-        .logo
-            margin-bottom: 40px
+    .nav
+        margin-bottom: 10px
+        a
+            padding: 10px 25px
+            display: inline-block
+            font-size: 20px

@@ -1,6 +1,8 @@
 @import 'normolize'
 @import 'elements'
 @import 'header'
+@import 'footer'
+@import 'header'
 @import 'slick'
 @import 'modal'
 
@@ -21,7 +23,7 @@
         top: 0
         left: 0
         background-color: $black
-        box-shadow: 0px 0px 80px 60px $black
+        box-shadow: 0px 0px 80px 70px $black
 
     .container
         max-width: 1600px
@@ -35,10 +37,11 @@
         max-width: 100%
         height: 100%
         z-index: -100
-        opacity: .8
+        opacity: .7
         // border-radius: 0 0 0 60px
 
     .headline
+        font-weight: 800
         position: relative
         z-index: 1
         &::before
@@ -51,6 +54,9 @@
             left: -40px
             z-index: -1
             background-color: $yelow
+
+    .textline 
+        font-weight: 500
 
     &-title
         padding-top: 100px
@@ -89,7 +95,7 @@
         z-index: 999999
         padding: 50px 80px
         border-radius: 8px
-        top: -80px
+        top: -60px
 
         background: rgb(39,25,255)
         background: linear-gradient(153deg, rgba(39,25,255,1) 0%, rgba(9,9,121,1) 45%, rgba(0,212,255,1) 100%)
@@ -122,22 +128,25 @@
         .headline
             text-align: left
 
+    &__img 
+        width: 48%
+
 .stages
     .wrap
         justify-content: flex-start
         align-items: stretch
 
     &-item
-        width: 32%
+        width: 32.5%
         min-height: 100px
         text-align: left
         border: 1px solid rgba(255, 255, 255, .2)
-        margin-bottom: 25px
+        margin-bottom: 10px
         display: flex
         align-items: center
         transition: all ease .3s
         &:nth-of-type(3n+2)
-            margin: 0 20px 25px
+            margin: 0 10px 10px
 
         &:hover
             transform: scale(1.01)
@@ -276,9 +285,11 @@
 
 .payment
     // padding: 80px 0 120px
+    .headline
+        margin-bottom: 80px
     &-item
         width: 32%
-        padding: 20px
+        padding: 30px 20px
         margin-bottom: 30px
         border-left: 1px solid #fff
         transition: all ease .3s
@@ -288,12 +299,13 @@
             font-size: 80px
             font-weight: 900
             display: block
-            margin-bottom: 60px
+            padding-bottom: 20px
+            margin-bottom: 80px
             border-bottom: 1px solid rgba(255, 255, 255, .2)
 
         .text
             font-size: 25px
-            font-weight: 200
+            font-weight: 300
             line-height: 130%
 
 .team
@@ -327,3 +339,30 @@
         padding-left: 25px
         background-size: 20px 20px
         color: rgba(255, 255, 255, .8)
+
+.ready
+    padding: 100px 0
+    .wrap 
+        align-items: stretch
+    &-item 
+        width: 31%
+        padding-bottom: 80px
+        margin-bottom: 30px
+        position: relative
+        z-index: 1
+
+    &__heading 
+        font-weight: 600
+        font-size: 20px
+        margin-bottom: 10px
+    &__text 
+        font-size: 18px 
+        font-weight: 300
+        margin-bottom: 20px
+
+    .btn 
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        display: block

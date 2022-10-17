@@ -12,27 +12,27 @@ $('.nav-drop').click(function (e) {
 /*---------------------------------------------------end*/
 
 
-$('.item-slider').slick({
-    dots: false,
-    arrows: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    variableWidth: true,
-    slidesToScroll: 1,
-    centerMode: false,
-    responsive: [
-        {
-            breakpoint: 700,
-            settings: {
-                arrows: false,
-                slidesToShow: 1,
-                centerMode: false,
-                slidesToScroll: 1
-            }
-        }
-    ]
-});
+// $('.item-slider').slick({
+//     dots: false,
+//     arrows: true,
+//     infinite: false,
+//     speed: 300,
+//     slidesToShow: 3,
+//     variableWidth: true,
+//     slidesToScroll: 1,
+//     centerMode: false,
+//     responsive: [
+//         {
+//             breakpoint: 700,
+//             settings: {
+//                 arrows: false,
+//                 slidesToShow: 1,
+//                 centerMode: false,
+//                 slidesToScroll: 1
+//             }
+//         }
+//     ]
+// });
 
 /*---------------------------------------------------end*/
 
