@@ -2,17 +2,13 @@
 @import 'elements'
 @import 'header'
 @import 'footer'
-@import 'header'
-@import 'slick'
+// @import 'slick'
 @import 'modal'
 
 .main
     overflow: hidden
     position: relative
-    z-index: 1
-    height: 100vh
-    min-height: 600px
-    max-height: 1080px
+    z-index: unset
     &::before
         content: ''
         display: block
@@ -26,7 +22,13 @@
         box-shadow: 0px 0px 80px 70px $black
 
     .container
+        height: 100vh
+        display: flex
+        flex-direction: column
+        min-height: 700px
+        max-height: 890px
         max-width: 1600px
+        padding-bottom: 100px
 
     &__img
         position: absolute
@@ -42,8 +44,10 @@
 
     .headline
         font-weight: 800
+        max-width: 600px
         position: relative
         z-index: 1
+        margin-bottom: 30px
         &::before
             content: ''
             display: block
@@ -55,12 +59,13 @@
             z-index: -1
             background-color: $yelow
 
-    .textline 
+    .textline
+        max-width: 600px
         font-weight: 500
 
     &-title
-        padding-top: 100px
-        max-width: 45%
+        margin: auto 0
+        max-width: 47%
         position: relative
         z-index: 1000
         padding-left: 100px
@@ -71,8 +76,8 @@
 
 .calculation
     position: relative
-    z-index: 99999999999
-    padding: 0 0 60px
+    z-index: 1000
+    padding: 0 0 50px
 
     &::before
         // content: ''
@@ -93,7 +98,7 @@
         left: 50%
         transform: translateX(-50%)
         z-index: 999999
-        padding: 50px 80px
+        padding: 35px 70px
         border-radius: 8px
         top: -60px
 
@@ -128,7 +133,7 @@
         .headline
             text-align: left
 
-    &__img 
+    &__img
         width: 48%
 
 .stages
@@ -242,8 +247,9 @@
     padding: 80px 0
     position: relative
     z-index: 1
+
     &-title
-        max-width: 55%
+        max-width: 53%
 
     .headline
         // font-size: 65px
@@ -269,6 +275,7 @@
         opacity: .5
 
     form
+        max-width: 44%
         border-radius: 10px
         width: 400px
         padding: 40px
@@ -284,27 +291,29 @@
             background-image: url('../img/car-4.jpg')
 
 .payment
-    // padding: 80px 0 120px
+
     .headline
         margin-bottom: 80px
+
     &-item
         width: 32%
-        padding: 30px 20px
+        padding: 20px 20px
         margin-bottom: 30px
-        border-left: 1px solid #fff
+        border-left: 1px solid rgba(255, 255, 255, .5)
         transition: all ease .3s
         &:hover
             transform: translateY(-10px)
+
         .num
             font-size: 80px
             font-weight: 900
             display: block
             padding-bottom: 20px
-            margin-bottom: 80px
+            margin-bottom: 60px
             border-bottom: 1px solid rgba(255, 255, 255, .2)
 
         .text
-            font-size: 25px
+            font-size: 24px
             font-weight: 300
             line-height: 130%
 
@@ -315,6 +324,8 @@
         padding: 30px 30px 40px
         text-align: center
         margin-bottom: 30px
+        position: relative
+        overflow: hidden
         img
             width: 150px
             height: 150px
@@ -323,6 +334,16 @@
             border-radius: 50%
             object-fit: cover
             object-position: center center
+
+        &::before
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: -1
 
     &__heading
         font-weight: 600
@@ -342,27 +363,266 @@
 
 .ready
     padding: 100px 0
-    .wrap 
+    .wrap
         align-items: stretch
-    &-item 
+    
+    &-item
         width: 31%
         padding-bottom: 80px
         margin-bottom: 30px
         position: relative
         z-index: 1
+        &:nth-of-type(even)
+            padding: 20px 20px 90px
+            background-color: rgba(255, 255, 255, .1)
+            .btn 
+                bottom: 20px
+                left: 20px
+                width: calc( 100% - 40px )
+            
 
-    &__heading 
+    &__heading
         font-weight: 600
         font-size: 20px
         margin-bottom: 10px
-    &__text 
-        font-size: 18px 
+    &__text
+        font-size: 18px
         font-weight: 300
         margin-bottom: 20px
 
-    .btn 
+    .btn
         position: absolute
         bottom: 0
         left: 0
         width: 100%
         display: block
+
+@media screen and ( max-width: 1200px )
+    .main
+        .container
+            min-height: 500px
+            height: unset
+
+        &__img
+            object-position: center left
+
+        &-title
+            padding: 80px 0 0 40px
+            max-width: 100%
+            width: 100%
+
+    .calculation
+        padding: 0 15px 0
+        .container
+            text-align: center
+            display: block
+            width: 800px
+            padding: 40px 20px
+            max-width: 96%
+            transform: none
+            left: 0
+            position: relative
+
+        .headline
+            text-align: center
+            width: 100%
+            font-size: 30px
+            margin: 0 auto 20px
+
+    .info
+        &.md-pt
+            padding-top: 10px
+
+        &__text
+            font-size: 20px
+
+        &-title
+            width: 50%
+            max-width: 48%
+
+    .credit
+
+    .stages
+        .wrap
+            justify-content: space-between
+        &-item
+            width: 49%
+            margin: 0 0 2% !important
+
+    .why
+        .wrap
+            margin-top: 60px
+        &-box
+            min-height: unset
+            p
+                font-size: 16px
+
+    .download
+
+    .payment
+        .wrap
+            align-items: stretch
+        &-item
+            .num
+                font-size: 60px
+                font-weight: 900
+                display: block
+                padding-bottom: 10px
+                margin-bottom: 40px
+            .text
+                font-size: 18px
+
+    .team
+        .wrap
+            justify-content: center
+        &-item
+            margin: 0 10px 20px
+            max-width: 350px
+            width: 48%
+
+    .ready
+        &-item
+            width: 48%
+            margin-bottom: 40px
+
+@media screen and ( max-width: 800px )
+    .main
+        .container
+            position: static
+            z-index: unset
+        &__img
+            width: 100%
+            max-width: 100%
+            opacity: .5
+            top: 0
+            left: 0
+
+@media screen and ( max-width: 700px )
+    .main
+        &-title
+            padding: 25px 0 20px 10px
+            padding-left: 10px
+
+        .headline
+            margin-bottom: 15px
+            &::before
+                left: -10px
+                width: 40px
+                height: 110%
+                top: -5%
+
+    .calculation
+        padding: 0 15px 0
+        .container
+            width: 400px
+            max-width: 92%
+
+        .headline
+            font-size: 24px
+            max-width: 250px
+
+    .info
+        &__img
+            width: 100%
+            max-width: 100%
+            margin-bottom: 40px
+
+        .wrap
+            display: block
+
+        &-title
+            max-width: 100%
+            width: 100%
+            margin-bottom: 40px
+            &:last-of-type
+                margin-bottom: 0
+
+    .stages
+        .wrap
+            display: block
+            width: 100%
+        &-item
+            width: 100%
+            margin: 0 0 15px !important
+
+    .credit
+        width: 100%
+        padding: 40px 30px
+        max-width: 100%
+        margin-bottom: 40px
+        img
+            margin-bottom: 20px
+            max-width: 90%
+            margin: 0 auto 20px
+
+    .why
+        &-item
+            width: 100%
+            max-width: 100%
+
+        .wrap
+            margin-top: 40px
+
+        &-box
+            width: 49%
+            margin-bottom: 2%
+            p
+                font-size: 14px
+
+            &:nth-of-type(5),
+            &:nth-of-type(6)
+                width: 49%
+            &:nth-of-type(7)
+                width: 100%
+
+    .download
+        .wrap
+
+        .headline
+            text-align: center
+            margin-bottom: 10px
+        .textline
+            text-align: center
+        &-title
+            width: 100%
+            order: 1
+            max-width: 100%
+
+        form
+            order: 2
+            width: 100%
+            max-width: 500px
+            margin: 0 auto
+
+    .payment
+        padding: 80px 0
+        .headline
+            margin-bottom: 40px
+
+        .wrap
+            display: block
+        &-item
+            width: 100%
+            margin-bottom: 40px
+            padding-bottom: 40px
+            border-bottom: 1px solid rgba(255, 255, 255, .5)
+
+    .team
+        .wrap
+            width: calc( 100% + 30px )
+            position: relative
+            left: -15px
+            overflow-x: scroll
+            flex-wrap: nowrap
+            padding-left: 15px
+
+        &-item
+            margin: 0 10px 0 0
+            min-width: 250px
+            width: 250px
+
+    .ready
+        &-item
+            width: 100%
+            max-width: 500px
+            margin-bottom: 40px

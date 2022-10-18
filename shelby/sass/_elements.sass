@@ -18,6 +18,8 @@ body
     flex-direction: column
     background-color: #131313
     font-family: 'Jost', sans-serif
+    &.unscroll
+        overflow: hidden
 
 .container
     width: 100%
@@ -315,27 +317,18 @@ ul
         li
             background-image: url('../img/check.svg')
 
-@media screen and ( max-width: 1170px )
-    .watermark
-        &::after,
-        &::before
-            display: none
-            background-image: none
-
-    .container
-        padding: 0 40px
-        &.full
-            padding: 0
-
+@media screen and ( max-width: 1200px )
     .headline
-        font-size: 32px
-        line-height: 120%
-        margin-bottom: 30px
+        font-size: 38px
 
     .textline
         font-size: 20px
-        line-height: 26px
 
+    section
+        padding: 60px 0
+
+    .logo
+        max-width: 200px
     .btn
         min-width: 180px
         &-menu
@@ -402,94 +395,18 @@ ul
                     &::after
                         background-color: transparent
 
-        &-filter
-            font-size: 16px
-            line-height: 22px
-            margin-bottom: 0
-
-    input,
-    textarea,
-    select
-        height: 32px
-        font-weight: 400
-        font-size: 16px
-        line-height: 22px
-
-    .inp
-        .heading
-            font-size: 16px
-            line-height: 22px
-            margin: 0
-        .descr
-            font-size: 14px
-            line-height: 20px
-
-        &-checkbox
-            label
-                &::before
-                    width: 24px
-                    height: 24px
-
-        &-count
-            padding: 14px 16px
-
-        &-wrap
-            label
-                font-size: 14px
-                line-height: 20px
-
-    .wrap
-        flex-wrap: wrap
-        &-strech
-            justify-content: space-around
-
-    section
-        overflow: hidden
-        padding: 60px 0
-
-    .social
-        &-heading
-            margin-bottom: 6px
-            font-size: 16px
-            line-height: 22px
+    ul
+        &.dont,
+        &.do
+            li
+                padding-left: 35px
+                background-size: 26px 26px
 
 @media screen and ( max-width: 700px )
 
-    section
-        padding: 60px 0
+    .headline
+        font-size: 28px
+        margin-bottom: 40px
 
     .textline
-        font-size: 20px
-        line-height: 26px
-
-    .subheading
-        font-size: 24px
-        line-height: 32px
-
-    .container
-        padding: 0 15px
-
-    .row
-        padding: 0
-
-    .inp
-        width: 100%
-        max-width: 100%
-
-    .btn
-        &-filter
-            font-size: 14px
-            line-height: 20px
-            margin-right: 12px
-
-    ol
-        &.styled
-            padding: 16px 16px 16px 42px
-
-    .social
-        &-heading
-            font-size: 14px
-            line-height: 20px
-
-    hr
-        margin: 12px 0
+        font-size: 18px

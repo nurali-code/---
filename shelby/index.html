@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelby</title>
 
-    <link rel="stylesheet" href="./css/style.css?ver-234">
+    <link rel="stylesheet" href="./css/style.css?ver-3456">
 </head>
 
 <body>
@@ -15,7 +15,6 @@
     <main class="main">
         <div class="container">
             <header>
-                <button class="btn-menu"><span></span></button>
                 <a href="./index.html" class="logo"><img src="./img/logo.png" alt="logo"></a>
                 <nav class="nav">
                     <a href="#" class="nav-link">Схема работ</a>
@@ -26,6 +25,7 @@
                     <button class="btn open-modal" data-modal="modal-form">Начать проект</button>
                 </nav>
                 <button class="btn open-modal" data-modal="modal-form">Начать проект</button>
+                <button class="btn-menu"><span></span></button>
             </header>
             <div class="main-title">
                 <h1 class="headline">
@@ -35,7 +35,7 @@
                     Доставим леворукий автомобиль иностранной сборки за 2-3 недели с комиссией всего 5% от стоимости
                     авто
                 </p>
-                <button class="btn btn-second">Заказать Консультацию</button>
+                <!-- <button class="btn btn-second">Заказать Консультацию</button> -->
                 <button class="btn">Посмотреть каталог</button>
             </div>
         </div>
@@ -49,7 +49,7 @@
         </div>
     </section>
 
-    <section class="info">
+    <section class="info md-pt">
         <div class="container">
             <h2 class="headline">Какие авто можно заказать и по какой цене?</h2>
             <p class="textline">
@@ -301,17 +301,17 @@
                     <p>Доставка в регионы(если требуется)</p>
                 </div>
                 <div class="why-box">
-                    <img src="img/police.svg" alt="img">
-                    <p>Таможенное оформление (пошлина на автомобили различается, просчитать пошлину можно <a
-                            href="#">tks.ru</a> )</p>
-                </div>
-                <div class="why-box">
                     <img src="img/calculator.svg" alt="img">
-                    <p>Наша комиссия 5% от всей суммы <br> всех составляющих</p>
+                    <p>Наша комиссия 5% от всей суммы всех составляющих</p>
                 </div>
                 <div class="why-box">
                     <img src="img/ship.svg" alt="img">
-                    <p>Доставка в порт отправки в Корее, <br> налоги и сборы (~600$)</p>
+                    <p>Доставка в порт отправки в Корее, налоги и сборы (~600$)</p>
+                </div>
+                <div class="why-box">
+                    <img src="img/police.svg" alt="img">
+                    <p>Таможенное оформление (пошлина на автомобили различается, просчитать пошлину можно <a
+                            href="#">tks.ru</a> )</p>
                 </div>
             </div>
         </div>
@@ -487,16 +487,6 @@
                     <input type="text" id="u-name" name="u-name" required placeholder="Как вас зовут?">
                 </div>
                 <div class="inp-wrap">
-                    <label>Услуга</label>
-                    <select name="u-service" id="u-service">
-                        <option value="Консультация">Консультация</option>
-                        <option value="Грейдинг должностей">Грейдинг должностей</option>
-                        <option value="Продажи и переговоры">Продажи и переговоры</option>
-                        <option value="Планирование индивидуального развития">Планирование индивидуального развития
-                        </option>
-                    </select>
-                </div>
-                <div class="inp-wrap">
                     <label>Телефон</label>
                     <input type="tel" name="u-phone" id="u-phone" required placeholder="Ваш номер телефона">
                 </div>
@@ -506,9 +496,8 @@
     </div>
 
     <script src="./js/jquery-3.4.1.min.js"></script>
-    <!-- <script src="./js/slick.min.js"></script> -->
     <script src="./js/jquery.inputmask.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="./js/scripts.js?ver-3456"></script>
 
 </body>
 

@@ -1,6 +1,7 @@
 
 $('.btn-menu').on('click', function () {
     $('header .nav, .btn-menu').toggleClass('active')
+    $('body').toggleClass('unscroll')
 })
 /*---------------------------------------------------end*/
 
@@ -11,30 +12,6 @@ $('.nav-drop').click(function (e) {
 
 /*---------------------------------------------------end*/
 
-
-// $('.item-slider').slick({
-//     dots: false,
-//     arrows: true,
-//     infinite: false,
-//     speed: 300,
-//     slidesToShow: 3,
-//     variableWidth: true,
-//     slidesToScroll: 1,
-//     centerMode: false,
-//     responsive: [
-//         {
-//             breakpoint: 700,
-//             settings: {
-//                 arrows: false,
-//                 slidesToShow: 1,
-//                 centerMode: false,
-//                 slidesToScroll: 1
-//             }
-//         }
-//     ]
-// });
-
-/*---------------------------------------------------end*/
 
 $(function () {
     function showModal(id) {
@@ -62,6 +39,7 @@ $(function () {
         if (!(
             ($(e.target).parents('.modal-content').length) ||
             ($(e.target).parents('.open-modal').length) ||
+            ($(e.target).parents('.modal-content')) ||
             ($(e.target).hasClass('open-modal')) ||
             ($(e.target).hasClass('modal-open'))
         )) {
