@@ -16,17 +16,17 @@ $('.nav-drop').click(function (e) {
 $(function () {
     function showModal(id) {
         $(id).fadeIn(300);
+        $('body').addClass('unscroll')
+
     }
 
     function hideModals() {
-        $('.modal iframe').remove();
         $('.modal').fadeOut();
-
+        $('body').removeClass('unscroll')
     };
 
     $('.open-modal').on('click', function (e) {
         let modId = $(this).attr("data-modal");
-        if ($(this).hasClass('vid')) { $(this).children('iframe').clone().appendTo('#modal-video .modal-content'); }
         showModal('#' + modId);
     });
 
@@ -70,7 +70,7 @@ $('.tab-btn').click(function (e) {
 /*---------------------------------------------------end*/
 
 
-$('input[type=tel]').inputmask({"mask": "+7 (999)-999-99-99"});
+$('input[type=tel]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
 $("form").submit(function () {
     $('form .btn').attr('disabled', 'disabled');
@@ -91,3 +91,23 @@ $("form").submit(function () {
 
 
 /*---------------------------------------------------end*/
+
+// async function getCurrencies() {
+//     const RESPONSE = await fetch('https://www.cbr-xml-daily.ru/daily_json.js');
+//     const DATA = await RESPONSE.json();
+//     const RESULT = await DATA;
+//     console.log(RESULT);
+//     console.log(
+//         RESULT.Valute.JPY.Value
+//     );
+// }
+// getCurrencies();
+
+$('#calculate').click(function (e) {
+    e.preventDefault();
+    $('.modal-resulte').slideDown()
+});
+
+
+/*---------------------------------------------------end*/
+

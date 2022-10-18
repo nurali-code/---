@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelby</title>
 
-    <link rel="stylesheet" href="./css/style.css?ver-3456">
+    <link rel="stylesheet" href="./css/style.css?ver-456">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
     <section class="calculation">
         <div class="container wrap">
             <h2 class="headline">Рассчитать стоимость авто из Кореи </h2>
-            <button class="btn btn-second">Рассчитать</button>
+            <button class="btn btn-second open-modal" data-modal="modal-calc" >Рассчитать</button>
         </div>
     </section>
 
@@ -478,9 +478,9 @@
     </footer>
 
     <div class="modal" id="modal-form">
-        <div class="modal-content start">
+        <div class="modal-content">
             <button class="modal-close">&#x2715</button>
-            <p class="headline open-modal" data-modal="modal-form">Заказать Консультацию</p>
+            <p class="headline">Заказать Консультацию</p>
             <form>
                 <div class="inp-wrap">
                     <label>Имя</label>
@@ -495,9 +495,184 @@
         </div>
     </div>
 
+    <div class="modal" id="modal-calc">
+        <div class="modal-content">
+            <button class="modal-close">&#x2715</button>
+            <p class="headline">Калькулятор стоимости легкового автомобиля</p>
+            <div class="wrap">
+                <div class="inp-wrap">
+                    <label>Аукционная стоимость</label>
+                    <input type="number" required placeholder="USD/JPY: 145.37" value="145.37">
+                </div>
+                <div class="inp-wrap">
+                    <label>Тамож.стоимость USD</label>
+                    <input type="number" required placeholder="USD/RUB: 63.7" value="63.7">
+                </div>
+                <div class="inp-wrap">
+                    <label>* Год выпуска</label>
+                    <input type="number" required placeholder="2000" min="1990" max="2050">
+                </div>
+                <div class="inp-wrap">
+                    <label>* Объем куб.см</label>
+                    <input type="number" required placeholder="2000">
+                </div>
+                <div class="inp-wrap">
+                    <label>* Мощность л.с.</label>
+                    <input type="number" required placeholder="2000">
+                </div>
+                <div class="inp-wrap">
+                    <label>Мощн.электро л.с.</label>
+                    <input type="number" required placeholder="2000">
+                </div>
+                <div class="inp inp-radio">
+                    <input type="radio" value="бензин" name="carType" id="radio_1">
+                    <label for="radio_1">
+                        <span class="heading">бензин</span>
+                    </label>
+                </div>
+                <div class="inp inp-radio">
+                    <input type="radio" value="дизель" name="carType" id="radio_2">
+                    <label for="radio_2">
+                        <span class="heading">дизель</span>
+                    </label>
+                </div>
+                <div class="inp inp-radio">
+                    <input type="radio" value="электро" name="carType" id="radio_3">
+                    <label for="radio_3">
+                        <span class="heading">электро</span>
+                    </label>
+                </div>
+                <div class="inp inp-radio">
+                    <input type="radio" value="бензиновый гибрид" name="carType" id="radio_4">
+                    <label for="radio_4">
+                        <span class="heading">бензиновый гибрид</span>
+                    </label>
+                </div>
+                <div class="inp inp-radio">
+                    <input type="radio" value="дизельный гибрид" name="carType" id="radio_5">
+                    <label for="radio_5">
+                        <span class="heading">дизельный гибрид</span>
+                    </label>
+                </div>
+                <div class="inp inp-checkbox">
+                    <input type="checkbox" value="0" name="carPow" id="radio_6">
+                    <label for="radio_6">
+                        <span class="heading">Мощн.ДВС > макс.30-мин.ЭД</span>
+                    </label>
+                </div>
+                <button class="btn" id="calculate">рассчитать</button>
+            </div>
+            <div class="modal-resulte">
+                <p class="subheadline">ИТОГО В ГОРОДЕ ДОСТАВКИ: 419480 руб </p>
+                <table>
+                    <thead>
+                        <th>Расходы в Японии</th>
+                        <th>JPY</th>
+                        <th>USD</th>
+                        <th>RUB</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>Аукционная стоимость</th>
+                            <td>145</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Доставка до порта отгрузки из Любой</th>
+                            <td>20000</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Расходы по Японии</th>
+                            <td>65000</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Фрахт до Владивостока </th>
+                            <td></td>
+                            <td>350</td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Итого</th>
+                            <td></td>
+                            <td>(934$)</td>
+                            <td> 57689 руб</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+                <table>
+                    <thead>
+                        <th>Расходы в России</th>
+                        <th>JPY</th>
+                        <th>USD</th>
+                        <th>RUB</th>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th>Таможенная пошлина и Утилизационный сбор </th>
+                            <td></td>
+                            <td>(9061$)</td>
+                            <td>577 186</td>
+                        </tr>
+                        <tr>
+                            <th>Склад временного хранения</th>
+                            <td></td>
+                            <td></td>
+                            <td>6000 </td>
+                        </tr>
+                        <tr>
+                            <th>Таможенное оформление автомобиля, услуги брокера</th>
+                            <td></td>
+                            <td></td>
+                            <td>6000 </td>
+                        </tr>
+                        <tr>
+                            <th>Евро 4</th>
+                            <td></td>
+                            <td></td>
+                            <td>2500</td>
+                        </tr>
+                        <tr>
+                            <th>Доставка до города Владивосток</th>
+                            <td></td>
+                            <td></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Комиссия компании</th>
+                            <td></td>
+                            <td></td>
+                            <td>33000</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <th>Итого</th>
+                            <td></td>
+                            <td>(934$)</td>
+                            <td> 57689 руб</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
     <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="./js/jquery.inputmask.min.js"></script>
-    <script src="./js/scripts.js?ver-3456"></script>
+    <script src="./js/scripts.js?ver-456"></script>
 
 </body>
 

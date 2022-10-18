@@ -170,7 +170,6 @@ select
 label
     color: $black
     display: block
-    margin-bottom: 5px
 
 select
     cursor: pointer
@@ -183,7 +182,7 @@ select
     z-index: 1
 
 .inp
-    margin: 0 auto 16px 0
+    margin: 0 0 10px 0
     width: 100%
     max-width: 49%
     label
@@ -191,9 +190,10 @@ select
 
     .heading
         display: block
+        padding-top: 4px
         font-weight: 400
-        font-size: 24px
-        line-height: 32px
+        font-size: 16px
+        line-height: 120%
 
     .descr
         font-weight: 400
@@ -206,9 +206,13 @@ select
         label
             font-weight: 400
             font-size: 16px
-            line-height: 22px
+            line-height: 120%
+            margin-bottom: 3px
             color: $black
             opacity: .7
+
+        input
+            margin: 0
 
     &-count
         display: flex
@@ -218,16 +222,19 @@ select
         border-radius: 6px
         padding: 20px 16px
 
-    &-checkbox
+    &-checkbox,
+    &-radio
         position: relative
-        padding-left: 40px
+        padding-left: 32px
 
         label
-            &::before
+            margin: 0
+            &::before,
+            &::after
                 content: ''
                 display: inline-block
-                width: 24px
-                height: 24px
+                width: 20px
+                height: 20px
                 border: 2px solid $black
                 border-radius: 6px
                 position: absolute
@@ -235,18 +242,38 @@ select
                 left: 0
                 background-repeat: no-repeat
                 background-position: center center
-                background-size: contain
+                background-size: 70%
+            &::after
+                transform-origin: 50% 50%
+                border-radius: 50%
+                border-color: transparent
+
         input
             width: 24px
             height: 24px
             opacity: 0
+            margin: 0
             position: absolute
             top: 0
             left: 0
             &:checked ~ label::before
-                border-color: transparent
-                background-color: $yelow
+                border-color: green
+                // background-color: $yelow
                 background-image: url('../img/check.svg')
+
+    &-radio
+        label
+            &::before
+                border-radius: 50%
+
+        input
+            &:checked ~ label
+                &::before
+                    border-color: $yelow
+                    background-image: none
+                &::after
+                    background-color: $yelow
+                    transform: scale(.5)
 
 .heading
     font-weight: 600
@@ -316,6 +343,29 @@ ul
     &.do
         li
             background-image: url('../img/check.svg')
+
+table
+    width: 100%
+    thead
+        border-bottom: 1px solid #000
+    td, th
+        padding: 10px
+        font-size: 14px
+
+    th
+        &:first-of-type
+            min-width: 150px
+    tr
+        &:nth-of-type(even)
+            background-color: rgba(0, 0, 0, .1)
+
+        &.total
+            // background-color: rgba($yelow, .1)
+
+        &.head
+            border-top: 2px solid #000
+            border-bottom: 1px solid #000
+            background-color: #fff
 
 @media screen and ( max-width: 1200px )
     .headline
