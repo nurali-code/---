@@ -87,6 +87,7 @@ $("form").submit(function () {
         url: "../telegram.php",
         data: $(this).serialize()
     }).done(function () {
+        $('form .btn').removeAttr('disabled');
         $('form').trigger('reset');
         alert('sended')
         // setTimeout(function () {

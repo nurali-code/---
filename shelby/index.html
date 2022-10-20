@@ -352,6 +352,7 @@
                 <p class="textline">Отправим договор в выбранный мессенджер</p>
             </div>
             <form action="#">
+                <input type="hidden" name="headline" value="Отправить образец договора">
                 <label for="u-phone2">Телефон *</label>
                 <input type="tel" required id="u-phone2" name="u-phone" placeholder="+7 (___)-___-__-__">
                 <label for="mess">В какой мессенджер отправить?</label>
@@ -453,12 +454,13 @@
     <section class="download model" id="search">
         <div class="container wrap">
             <form action="#">
+                <input type="hidden" name="headline" value="Найти модель авто">
                 <label for="u-phone3">Телефон *</label>
                 <input type="tel" required id="u-phone3" name="u-phone" placeholder="+7 (___)-___-__-__">
                 <label for="u-model">Марка, модель и год авто</label>
                 <input type="text" required id="u-model" name="u-model" placeholder="Марка, модель и год авто">
                 <label for="mess2">В какой мессенджер отправить?</label>
-                <select name="mess2" id="mess">
+                <select name="mess" id="mess2" required>
                     <option value="WhatsApp">WhatsApp</option>
                     <option value="Telegram">Telegram</option>
                 </select>
@@ -612,6 +614,7 @@
             <button class="modal-close">&#x2715</button>
             <p class="headline">Заказать Консультацию</p>
             <form>
+                <input type="hidden" name="headline" value="Заказан звонок">
                 <div class="inp-wrap">
                     <label>Имя</label>
                     <input type="text" id="u-name" name="u-name" required placeholder="Как вас зовут?">
