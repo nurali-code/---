@@ -18,7 +18,7 @@ body
     flex-direction: column
     background-color: #131313
     font-family: 'Jost', sans-serif
-    &.unscroll
+    &.active
         overflow: hidden
 
 .container
@@ -56,6 +56,7 @@ button
     text-decoration: none
     color: #fff
     transition: all ease .3s
+    background-color: transparent
     &:active
         transform: scale(.98)
 
@@ -67,12 +68,10 @@ section
     position: relative
 
 .logo
-    display: inline-block
     max-width: 230px
-    filter: brightness(20) contrast(2)
 
 .btn
-    font-weight: 600
+    font-weight: 500
     font-size: 16px
     line-height: 20px
     display: inline-block
@@ -91,7 +90,8 @@ section
         display: none
 
     &:hover
-        opacity: .9
+        opacity: 1
+        box-shadow: 0 4px 40px 0px rgba(#003fd4, .8)
 
     &:active
         opacity: 1
@@ -118,6 +118,11 @@ section
         background-color: transparent
         color: #fff
         border: 1px solid #fff
+        &:hover
+            opacity: 1
+            box-shadow: none
+            background-color: $yelow
+            border-color: $yelow
 
 .wrapper, .slider, .wrap, .wrap-strech, .wrap-start, .box-wrap
     display: flex
@@ -202,12 +207,12 @@ select
         opacity: .7
 
     &-wrap
-        margin-bottom: 24px
+        margin-bottom: 15px
         label
             font-weight: 400
             font-size: 16px
             line-height: 120%
-            margin-bottom: 3px
+            margin-bottom: 5px
             color: $black
             opacity: .7
 
@@ -310,8 +315,6 @@ ul
         padding-left: 30px
         margin: 0 0 20px
         position: relative
-        &:last-of-type
-            margin-bottom: 0
         &::before
             content: ''
             display: inline-block
@@ -336,13 +339,14 @@ ul
             color: rgba(255, 255, 255, .8)
             background-image: url('../img/wrong.svg')
             background-repeat: no-repeat
-            background-size: 38px 38px
+            background-size: 34px 34px
             background-position: left top 5px
             &::before
                 display: none
     &.do
         li
             background-image: url('../img/check.svg')
+            background-size: 38px 38px
 
 table
     width: 100%
@@ -366,6 +370,29 @@ table
             border-top: 2px solid #000
             border-bottom: 1px solid #000
             background-color: #fff
+
+hr
+    background-color: rgba(255, 255, 255, .3)
+    height: 1px
+    margin: 20px 0 20px
+
+.phone
+    font-size: 18px
+    font-weight: 500
+    text-align: right
+    margin-right: 30px
+    i
+        width: 100%
+        font-size: 14px
+        font-weight: 300
+        display: block
+
+@media screen and ( max-width: 1500px )
+    .headline
+        font-size: 42px
+
+    .textline
+        font-size: 22px
 
 @media screen and ( max-width: 1200px )
     .headline

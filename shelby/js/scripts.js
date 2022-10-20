@@ -1,8 +1,6 @@
 
-$('.btn-menu').on('click', function () {
-    $('header .nav, .btn-menu').toggleClass('active')
-    $('body').toggleClass('unscroll')
-})
+$('.btn-menu').on('click', () => { $('header .nav, body, .btn-menu').toggleClass('active') })
+
 /*---------------------------------------------------end*/
 
 $('.nav-drop').click(function (e) {
@@ -12,26 +10,30 @@ $('.nav-drop').click(function (e) {
 
 /*---------------------------------------------------end*/
 
+$('a[href*="#"]').on('click', function (e) {
+    e.preventDefault()
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top, }, 500,)
+})
+
+/*---------------------------------------------------end*/
 
 $(function () {
     function showModal(id) {
         $(id).fadeIn(300);
-        $('body').addClass('unscroll')
-
+        $('body').addClass('active')
     }
 
     function hideModals() {
         $('.modal').fadeOut();
-        $('body').removeClass('unscroll')
+        $('body').removeClass('active')
     };
 
     $('.open-modal').on('click', function (e) {
-        let modId = $(this).attr("data-modal");
-        showModal('#' + modId);
+        e.preventDefault()
+        showModal('#' + $(this).attr("data-modal"));
     });
 
-
-    $('.modal-close').on('click', function () {
+    $('.modal-close').on('click', () => {
         hideModals();
     });
 
@@ -39,11 +41,16 @@ $(function () {
         if (!(
             ($(e.target).parents('.modal-content').length) ||
             ($(e.target).parents('.open-modal').length) ||
-            ($(e.target).parents('.modal-content')) ||
-            ($(e.target).hasClass('open-modal')) ||
-            ($(e.target).hasClass('modal-open'))
+            ($(e.target).parents('.nav').length) ||
+            ($(e.target).parents('.btn-menu').length) ||
+            ($(e.target).hasClass('nav')) ||
+            ($(e.target).hasClass('btn-menu')) ||
+            ($(e.target).hasClass('.modal-content')) ||
+            ($(e.target).hasClass('open-modal'))
         )) {
             hideModals();
+            $('header .nav, body, .btn-menu').removeClass('active')
+
         }
     });
 });
@@ -77,11 +84,11 @@ $("form").submit(function () {
     $.ajax({
         type: "POST",
         method: 'POST',
-        url: "../send.php",
+        url: "../telegram.php",
         data: $(this).serialize()
     }).done(function () {
         $('form').trigger('reset');
-        window.location.href = "thanks.html";
+        alert('sended')
         // setTimeout(function () {
         //     $('.modal').fadeOut();
         // }, 2000);
