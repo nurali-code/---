@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="header-top wrap">
+            <div class="container wrap">
+                <a href="#" class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                    <span class="logo__slogan"><b>по-соседски:</b> легко и надежно!</span>
+                </a>
+                <div class="wrap">
+                    <div class="user-city">
+                        <span class="label">Ваш город: </span>
+                        <a href="#">Санкт-Петербург</a>
+                    </div>
+                    <a href="#" class="header__info">О сервисе</a>
+                    <button class="btn btn-second">Заявка</button>
+                    <button class="btn">Разместить объявление</button>
+                    <div class="user-wrap">
+                        <button class="user wrap drd-btn">
+                            <img src="img/user.jpg" class="user__img" alt="user">
+                            <span class="user__name">Evgeniy.T</span>
+                        </button>
+                        <div class="user-drop drd-cont">
+                            <a href="#">
+                                <img src="img/user.svg" alt="img">
+                                Профиль
+                            </a>
+                            <a href="#">
+                                <img src="img/edit.svg" alt="img">
+                                Кабинет аренды
+                            </a>
+                            <a href="#">
+                                <img src="img/heart.svg" alt="img">
+                                Избранное
+                            </a>
+                            <a href="#">
+                                <img src="img/bell.svg" alt="img">
+                                Уведомления
+                            </a>
+                            <a href="#">
+                                <img src="img/setting.svg" alt="img">
+                                Настройки
+                            </a>
+                            <a href="#">
+                                <img src="img/exit.svg" alt="img">
+                                Выйти
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="header-middle wrap">
+                <div class="catalog">
+                    <button class="catalog__btn drd-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 12H18.5" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.5 16H18.5" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M5.5 8H18.5" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Категории
+                    </button>
+                    <div class="catalog-content drd-cont">
+                        <div class="catalog-wrap">
+                            <p class="catalog__heading">Транспорт</p>
+                            <ul>
+                                <li><a href="#">Автомобили (с водителем)</a></li>
+                                <li><a href="#">Мотоциклы и мототехника </a></li>
+                                <li><a href="#">Водный транспорт</a></li>
+                                <li><a href="#">Другое</a></li>
+                            </ul>
+                            <p class="catalog__heading">Электроника</p>
+                            <ul>
+                                <li><a href="#">Телефоны</a></li>
+                                <li><a href="#">Аудио и видео</a></li>
+                                <li><a href="#">Игры, приставки и программы</a></li>
+                                <li><a href="#">Ноутбуки, ПК, планшеты</a></li>
+                                <li><a href="#">Фототехника</a></li>
+                            </ul>
+                            <p class="catalog__heading">Электроника</p>
+                            <ul>
+                                <li><a href="#">Телефоны</a></li>
+                                <li><a href="#">Аудио и видео</a></li>
+                                <li><a href="#">Игры, приставки и программы</a></li>
+                                <li><a href="#">Ноутбуки, ПК, планшеты</a></li>
+                                <li><a href="#">Фототехника</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <input type="search" class="search" placeholder="Поиск вещей">
+                <div class="filter wrap">
+                    <div class="inp-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_4530)">
+                                <path d="M16 2V6" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M8 2V6" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M3 9H21" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M19 4H5C3.895 4 3 4.895 3 6V19C3 20.105 3.895 21 5 21H19C20.105 21 21 20.105 21 19V6C21 4.895 20.105 4 19 4Z"
+                                    stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7 13H17" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7 17H12" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M16 21V18C16 17.448 16.448 17 17 17H21" stroke="#9D9D9D" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_4530">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <input type="text" name="dates" class="inp-date" placeholder="Cрок аренды">
+                    </div>
+                    <div class="inp-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.00076 12C5.53842 12.0001 5.09038 12.1603 4.73286 12.4535C4.37534 12.7467 4.13042 13.1546 4.03976 13.608L3.03981 18.6078C2.98178 18.8979 2.98886 19.1973 3.06053 19.4844C3.13221 19.7715 3.26669 20.0391 3.45429 20.268C3.64189 20.4968 3.87793 20.6812 4.14539 20.8078C4.41285 20.9343 4.70507 21 5.00097 21H18.9996C19.2955 21 19.5877 20.9343 19.8552 20.8078C20.1227 20.6812 20.3587 20.4968 20.5463 20.268C20.7339 20.0391 20.8684 19.7715 20.9401 19.4844C21.0117 19.1973 21.0188 18.8979 20.9608 18.6078L19.9608 13.608C19.8701 13.1546 19.6252 12.7467 19.2677 12.4535C18.9102 12.1604 18.4622 12.0001 17.9998 12"
+                                stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 17H15.5" stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M7.5 7.5C7.5 6.30653 7.97411 5.16193 8.81802 4.31802C9.66193 3.47411 10.8065 3 12 3V3C13.1935 3 14.3381 3.47411 15.182 4.31802C16.0259 5.16193 16.5 6.30653 16.5 7.5C16.5 9.48666 14.2599 11.6071 12.9396 12.6839C12.669 12.8891 12.3386 13.0001 11.999 13C11.6594 12.9999 11.3291 12.8887 11.0586 12.6834C9.73949 11.6065 7.5 9.48637 7.5 7.5Z"
+                                stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M11.9991 7.25001C11.9496 7.2502 11.9014 7.26502 11.8604 7.2926C11.8194 7.32019 11.7875 7.3593 11.7688 7.405C11.75 7.45069 11.7452 7.50093 11.7549 7.54936C11.7647 7.59779 11.7886 7.64225 11.8236 7.67712C11.8586 7.71199 11.9031 7.7357 11.9516 7.74527C12 7.75484 12.0503 7.74984 12.0959 7.73089C12.1415 7.71194 12.1805 7.6799 12.2079 7.6388C12.2354 7.59771 12.25 7.54942 12.25 7.50001C12.2502 7.46705 12.2438 7.43439 12.2312 7.40391C12.2187 7.37344 12.2002 7.34577 12.1768 7.32251C12.1535 7.29924 12.1257 7.28086 12.0952 7.26841C12.0647 7.25596 12.032 7.24971 11.9991 7.25001"
+                                stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <input type="text" id="cities" class="inp-city avtocomplite" placeholder="Город">
+                    </div>
+                    <div class="inp-wrap">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_4546)">
+                                <path
+                                    d="M14 16.0133V20.5003C14 20.7763 14.214 21.0003 14.479 21.0003H19.522C19.786 21.0003 20 20.7763 20 20.5003V15.9863"
+                                    stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M13 16.667L17.082 14L21 16.667" stroke="#9D9D9D" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.4557 12.8674C11.827 12.8674 12.9387 11.7557 12.9387 10.3844C12.9387 9.01304 11.827 7.90137 10.4557 7.90137C9.08433 7.90137 7.97266 9.01304 7.97266 10.3844C7.97266 11.7557 9.08433 12.8674 10.4557 12.8674Z"
+                                    stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M17.889 10.924C18.019 8.863 17.303 6.759 15.728 5.184C12.816 2.272 8.096 2.272 5.184 5.184C2.272 8.096 2.272 12.816 5.184 15.728L10.456 21"
+                                    stroke="#9D9D9D" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_4546">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <input type="text" class="inp-location avtocomplite" placeholder="Район">
+                    </div>
+                    <button type="recet" class="filter__recet">Сбросить</button>
+                    <button class="btn">Найти</button>
+                </div>
+                <div class="filter wrap">
+
+                </div>
+            </div>
+
+            <div class="header-bottom">
+                <div class="inp inp-checkbox">
+                    <input type="checkbox" id="checkbox_2">
+                    <label for="checkbox_2">
+                        Доставка
+                    </label>
+                </div>
+                <div class="inp inp-checkbox">
+                    <input type="checkbox" id="checkbox_3">
+                    <label for="checkbox_3">
+                        Подтверждение
+                    </label>
+                </div>
+                <div class="inp inp-checkbox">
+                    <input type="checkbox" id="checkbox_4">
+                    <label for="checkbox_4">
+                        Дезинфекция
+                    </label>
+                </div>
+                <div class="inp inp-checkbox">
+                    <input type="checkbox" id="checkbox_5">
+                    <label for="checkbox_5">
+                        Без залога
+                    </label>
+                </div>
+                <div class="inp inp-checkbox">
+                    <input type="checkbox" id="checkbox_6">
+                    <label for="checkbox_6">
+                        Досрочный возврат
+                    </label>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- <script src="./js/jquery.inputmask.min.js"></script> -->
+    <script src="./js/cities.js"></script>
+    <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>
