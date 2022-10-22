@@ -929,8 +929,8 @@ ol, li {
   min-width: 360px;
   position: absolute;
   z-index: 1000;
-  left: 20px;
-  top: 130%;
+  left: 15px;
+  top: 125%;
   padding: 20px 8px 0 12px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.03);
