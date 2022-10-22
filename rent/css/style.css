@@ -781,6 +781,7 @@ ol, li {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
+  position: relative;
 }
 .header-middle input {
   -webkit-border-radius: 0;
