@@ -1,0 +1,242 @@
+.header
+    &-top
+        font-size: 14px
+        line-height: 17px
+        display: flex
+        justify-content: space-between
+        padding: 11px 0
+        background-color: #fff
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+        .container
+            z-index: unset
+
+        .wrap
+            flex-wrap: nowrap
+
+    .logo
+        display: flex
+        align-items: center
+        &__slogan
+            display: inline-block
+            color: $blue
+            vertical-align: middle
+            padding-left: 18px
+
+    &__info
+        margin-right: 22px
+
+    .btn
+        &-second
+            margin: 0 22px 0
+
+    .user
+        margin-left: 45px
+        padding-right: 50px
+        background-image: url('../img/more.svg')
+        background-repeat: no-repeat
+        background-position: right center
+        background-size: 24px 24px
+        &-wrap
+
+        &-city
+            margin: 0 22px 0 0
+            .label
+                color: #919191
+
+            a
+                text-decoration: underline
+                color: $blue
+                font-weight: bold
+
+        &__img
+            border: 2.5px solid #E5F0FF
+            width: 38px
+            min-width: 38px
+            height: 38px
+            border-radius: 50%
+            object-fit: cover
+            margin: 0 8px 0 0
+
+        &__name
+            font-weight: 500
+            font-size: 16px
+            line-height: 19px
+            letter-spacing: 0.02em
+            color: rgba(0, 0, 0, 0.6)
+
+        &-drop
+            display: none
+            position: absolute
+            top: 140%
+            padding: 10px 6px
+            right: -20px
+            background-color: #fff
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.05)
+            border-radius: 13px
+            z-index: 1000000
+            min-width: 180px
+            a
+                padding: 4px 10px 4px 2px
+                font-weight: 400
+                font-size: 14px
+                line-height: 17px
+                display: block
+                border-radius: 8px
+
+                &:hover
+                    color: $blue
+                    background-color: rgba($blue, .1)
+            img
+                display: inline-block
+                width: 24px
+                height: 24px
+                margin: 0 4px 0 0
+                object-fit: contain
+                vertical-align: middle
+
+    &-middle
+        background: #FFFFFF
+        box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.03)
+        border-radius: 13px
+        margin: 25px 0 18px
+        padding: 6px 10px
+        flex-wrap: nowrap
+        position: relative
+        input
+            border-radius: 0
+            height: 31px
+            border:
+                top: none
+                bottom: none
+                right: none
+
+        .search
+            width: 40%
+            max-width: unset
+            font-weight: 400
+            font-size: 14px
+            line-height: 17px
+            margin: 0 auto 0 20px
+            padding: 0 20px
+
+            &::placeholder
+                color: #9D9D9D
+
+    .inp
+        &-wrap
+            position: relative
+            z-index: 1
+            svg
+                width: 24px
+                height: 24px
+                position: absolute
+                left: 17px
+                top: 50%
+                transform: translateY(-50%)
+
+            &:focus-within
+
+                path
+                    stroke: $blue !important
+                input
+                    color: $blue
+
+    .filter
+        flex-wrap: nowrap
+        input
+            width: 190px
+            min-width: unset
+            display: inline-block
+            margin: 0
+            font-size: 14px
+            padding-left: 48px
+            padding-right: 10px
+
+            &::placeholder
+                color: #9D9D9D
+
+        &__recet
+            padding: 15px
+            font-size: 14px
+            line-height: 17px
+
+    .catalog
+        min-width: 12%
+        &__btn
+            width: 100%
+            display: inline-flex
+            align-items: center
+            padding: 10px
+            border-radius: 10px
+            svg
+                margin-right: 5px
+            &.active,
+            &:hover
+                color: $blue
+                // background-color: rgba($blue, .1 )
+                path
+                    stroke: $blue !important
+
+        &-wrap
+            overflow-y: scroll
+            padding: 0 10px 20px 0
+            max-height: 400px
+            &::-webkit-scrollbar
+                width: 3px
+
+            &::-webkit-scrollbar-track
+                box-shadow: inset 0 0 6px rgba(157, 157, 157, 0.18)
+
+            &::-webkit-scrollbar-thumb
+                background-color: #95C3FF
+                border-radius: 2px
+
+        &-content
+            display: none
+            min-width: 360px
+            position: absolute
+            z-index: 1000
+            left: 15px
+            top: 125%
+            padding: 20px 8px 0 12px
+            background: #FFFFFF
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.03)
+            backdrop-filter: blur(3.5px)
+            border-radius: 13px
+            overflow: hidden
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 0
+                position: absolute
+                bottom: 0
+                left: 0
+                box-shadow: 0px 0px 35px 40px #fff
+
+            a
+                font-weight: 400
+                font-size: 14px
+                line-height: 17px
+                color: #202020
+                display: block
+                padding: 7px 8px
+                border-radius: 8px
+                &:hover
+                    color: $blue
+                    background-color: rgba($blue, .1)
+
+            ul
+                margin-bottom: 26px
+
+        &__heading
+            color: $blue
+            font-weight: 700
+            font-size: 18px
+            line-height: 22px
+            padding: 0 8px
+            margin-bottom: 11px
+
+    &-bottom
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08)
+        padding: 0 20px 18px
