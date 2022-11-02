@@ -1,14 +1,22 @@
 header
-    padding: 20px 0
+    padding: 0px 0
     .nav
+        li
+            margin: 0
+            &::before
+                display: none
+            &.active,
+            &:hover
+                a
+                    opacity: 1
+                    color: #fff
+                    background-color: #154f9f
         a
             display: block
-            padding: 25px
+            padding: 60px 25px
             font-size: 18px
             color: #313131
             font-weight: book
-            &:hover
-                opacity: .5
 
     .logo
         display: inline-block
@@ -31,5 +39,6 @@ header
             padding: 10px 20px
 
     @media screen and ( max-width: 1200px )
+        padding: 10px 0
         .nav
             display: none

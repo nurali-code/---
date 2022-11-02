@@ -8,7 +8,7 @@ $mess = $_POST['mess'];
 $model = $_POST['u-model'];
 
 $token = "5735509513:AAG_KSYHWA6rbXCct5qWqW2tGZ6NJZqut_8";
-$chat_id = "-893363856";
+$chat_id = "-1001844882677";
 
 $arr = array(
     'Форма: ' => $headline,

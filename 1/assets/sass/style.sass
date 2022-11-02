@@ -90,7 +90,7 @@
         background-repeat: no-repeat
         background-size: 1920px auto
         padding-right: 80px
-        background-position: bottom center
+        background-position: bottom -2px center
         padding:
             left: 80px
 
@@ -102,6 +102,17 @@
         &-img
             left: 0
             right: auto
+
+    &.reverce
+        .project
+            &-title
+                left: 0
+
+        .half
+            margin: 0 auto 0 0
+            &-img
+                left: auto
+                right: 0
 
 .numbers
     background: #131226
@@ -200,6 +211,148 @@
     &-img
         max-width: 60%
 
+.features
+    background-color: #eef3fb
+    background-image: url('../img/shape-4.png')
+    background-repeat: no-repeat
+    background-position: center bottom -2px
+    background-size: 1920px auto
+    padding: 100px 0 180px
+    color: #000
+    .headline
+        max-width: 70%
+        margin-bottom: 60px
+    .d-wrap
+        flex-wrap: wrap
+        align-items: flex-start
+    &-item
+        width: 48%
+        margin: 0 0 60px
+        &__heading
+            font-weight: normal
+            font-size: 24px
+            line-height: 130%
+            margin: 0 0 20px
+
+        &__text
+            font-size: 18px
+            line-height: 170%
+
+.news
+    background-color: #e40046
+    background-image: url('../img/shape-4.png')
+    background-repeat: no-repeat
+    background-position: center bottom -2px
+    background-size: 1920px auto
+    padding: 100px 0 180px
+    .headline
+        text-decoration: underline
+        margin-bottom: 60px
+    &-item
+        width: 24%
+        aspect-ratio: 1/1
+        display: flex
+        position: relative
+        z-index: 1
+        margin-bottom: 1%
+        overflow: hidden
+        &__link
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 1000
+            display: block
+
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            bottom: 0
+            width: 100%
+            height: 100%
+            background: rgba(0,0,0, .5)
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 71%)
+        img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+            transition: transform .3s ease
+        &__text
+            font-weight: normal
+            line-height: 150%
+            position: absolute
+            z-index: 100
+            width: 90%
+            left: 5%
+            bottom: 5%
+        &:hover
+            img
+                transform: scale(1.1) rotate(1deg)
+            .news-item__text
+                text-decoration: underline
+
+.infrastructure
+    padding: 100px 0
+    color: #000
+    background-image: url('../img/shape.png')
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: 120% auto
+    img
+        margin: 0 0 30px
+
+    .headline
+        margin-bottom: 60px
+
+    .textline
+        font-weight: normal
+        line-height: 170%
+        font-size: 18px
+        margin: 0
+        a
+            color: #2435c7
+
+.actual
+    padding: 100px 0
+    color: #000
+    background-color: #eef3fb
+    .textline
+        font-weight: normal
+        line-height: 170%
+        font-size: 18px
+        margin: 0 0 40px
+        a
+            color: #2435c7
+
+    .subheading
+        font-size: 24px
+        line-height: 170%
+        font-weight: normal
+        margin-bottom: 30px
+
+    .d-wrap
+        flex-direction: row-reverse
+        margin-bottom: 40px
+        img
+            max-width: 50%
+
+    ul
+        max-width: 45%
+        li
+            line-height: 170%
+            margin-bottom: 20px
+            &:last-of-type
+                margin-bottom: 0
+            &::before
+                background-color: #2435c7
+                border-radius: 0
+
 @media screen and ( max-width: 1500px )
     .half
         &-img
@@ -291,6 +444,10 @@
         &-title
             padding: 70px 20px 130px
 
+        &.reverce
+            .half
+                padding: 50px 20px 100px
+
     .numbers
         .container
             padding: 0
@@ -313,6 +470,25 @@
 
         &-img
             width: 100%
+            max-width: 100%
+
+    .news
+        &-item
+            width: 49%
+
+    .actual
+        padding: 60px 0
+        .subheading
+            font-size: 20px
+            margin-bottom: 20px
+        .d-wrap
+            display: block
+            img
+                max-width: 100%
+                display: block
+                margin-bottom: 30px
+
+        ul
             max-width: 100%
 
 @media screen and ( max-width: 700px )
@@ -389,3 +565,31 @@
 
         .btn
             margin-bottom: 30px
+
+    .features
+        padding: 60px 0 100px
+        &-item
+            width: 100%
+            &__heading
+                font-size: 20px
+                margin-bottom: 15px
+            &__text
+                font-size: 16px
+
+    .news
+        padding: 60px 0 120px
+        &-item
+            width: 100%
+            margin-bottom: 20px
+
+            // &__text 
+            //     font-size: 14px
+
+    .actual 
+        .textline
+            font-size: 16px
+
+    .infrastructure
+        background-size: 300vw auto
+        .textline
+            font-size: 16px
